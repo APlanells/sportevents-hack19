@@ -5,10 +5,10 @@ header('Expires: Mon, 26 Jul 1997 05:00:00 GMT');
 
 
 
-$SETUP = array(
-              'SkillName' => "test",
+$$SETUP = array(
+              'SkillName' => "Sport Events",
               'SkillVersion' => '1.0',
-              'ApplicationID' => 'amzn1.ask.skill.2895891b-df17-40a3-8e58-95b0d8072a05', 
+              'ApplicationID' => 'amzn1.ask.skill.219d63f8-6070-4b79-b6ec-997cacad7fb0', 
               'CheckSignatureChain' => true, 
               'ReqValidTime' => 60, 
               'AWSaccount' => '', 
