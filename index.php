@@ -3,11 +3,11 @@ $ch = curl_init('https://pub.s10.exacttarget.com/grdiacvr5an?gameId=10&email=ase
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
 $response = curl_exec($ch);
-curl_close($ch); 
-$total = json_decode($response);
+ 
+$total = json_encode($response);
 var_dump($total);
 print_r($total);
-
+curl_close($ch);
 
 
 $return_defaults = array(
