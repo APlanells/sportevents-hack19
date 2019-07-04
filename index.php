@@ -1,4 +1,10 @@
 <?php
+$ch = curl_init('https://pub.s10.exacttarget.com/grdiacvr5an?gameId=1');
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
+$response = curl_exec($ch);
+curl_close($ch); 
+
 
 $return_defaults = array(
                               'version' => $SETUP['SkillVersion'],
