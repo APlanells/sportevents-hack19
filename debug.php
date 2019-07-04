@@ -126,15 +126,14 @@ function GetJsonMessageResponse($RequestMessageType, $EchoReqObj)
               $ReturnValue = "";
               if ($RequestMessageType == "LaunchRequest")
                             {
-
-$ch = curl_init('https://fuelseuba.herokuapp.com/?var=a');
+$ch = curl_init('https://sportevents-hack19.herokuapp.com/?gameId=1');
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
 
 
 $response = curl_exec($ch);
 
-curl_close($ch);
+curl_close($ch); 
 
                                           
                             $return_defaults = array(
@@ -148,7 +147,7 @@ curl_close($ch);
                                           'response' => array(
                                                          'outputSpeech' => array(
                                                                        'type' => "PlainText",
-                                                                       'text' => "Orden aceptada Albert,acabo de activar las luces"
+                                                                       'text' => "ALEX RESPONSE"
                                                          ) ,
                                                          'card' => array(
                                                                        'type' => "Simple",
