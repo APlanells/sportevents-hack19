@@ -1,5 +1,5 @@
 <?php
-$ch = curl_init('https://pub.s10.exacttarget.com/grdiacvr5an?gameId=1');
+$ch = curl_init('https://pub.s10.exacttarget.com/grdiacvr5an?gameId=1&email=aseuba@gmail.com');
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
 $response = curl_exec($ch);
