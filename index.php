@@ -127,14 +127,6 @@ function GetJsonMessageResponse($RequestMessageType, $EchoReqObj)
               if ($RequestMessageType == "LaunchRequest")
                             {
 
-$ch = curl_init('https://fuelseuba.herokuapp.com/?var=a');
-curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
-
-
-$response = curl_exec($ch);
-
-curl_close($ch);
 
                                           
                             $return_defaults = array(
@@ -148,7 +140,7 @@ curl_close($ch);
                                           'response' => array(
                                                          'outputSpeech' => array(
                                                                        'type' => "PlainText",
-                                                                       'text' => "Orden aceptada Albert,acabo de activar las luces"
+                                                                       'text' => "ok"
                                                          ) ,
                                                          'card' => array(
                                                                        'type' => "Simple",
@@ -177,12 +169,13 @@ curl_close($ch);
                             }
               elseif ($RequestMessageType == "IntentRequest")
                             {
-                            if ($EchoReqObj->request->intent->name == "thank you") // Alexa Intent name
+                            if ($EchoReqObj->request->intent->name == "") // Alexa Intent name
                                           {
 
                                           $SpeakPhrase = "OK";
+                             
                                           }
-                            elseif ($EchoReqObj->request->intent->name == "tracking") // 2nd Alexa Intent name
+                            elseif ($EchoReqObj->request->intent->name == "") // 2nd Alexa Intent name
                                           {
 
                                           $SpeakPhrase = "OK ok";
