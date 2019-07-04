@@ -6,6 +6,7 @@ $response = curl_exec($ch);
 curl_close($ch); 
 
 
+
 $return_defaults = array(
                               'version' => $SETUP['SkillVersion'],
                               'sessionAttributes' => array(
@@ -17,7 +18,7 @@ $return_defaults = array(
                                           'response' => array(
                                                          'outputSpeech' => array(
                                                                        'type' => "PlainText",
-                                                                       'text' => "ok"
+                                                                       'text' => ".$response."
                                                          ) ,
                                                          'card' => array(
                                                                        'type' => "Simple",
