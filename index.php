@@ -1,3 +1,5 @@
+<?php
+
 $return_defaults = array(
                               'version' => $SETUP['SkillVersion'],
                               'sessionAttributes' => array(
