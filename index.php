@@ -143,6 +143,7 @@ function GetJsonMessageResponse($RequestMessageType, $EchoReqObj)
                             }
               elseif ($RequestMessageType == "IntentRequest")
                             {
+                echo '***********Entra aqui'
                             if ($EchoReqObj->request->intent->name == "SportEventsIntent") // Alexa Intent name
                                           {
                                           $SpeakPhrase = "sport event detected";
