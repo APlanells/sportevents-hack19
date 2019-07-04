@@ -149,7 +149,7 @@ function GetJsonMessageResponse($RequestMessageType, $EchoReqObj)
                                                          ) ,
                                                          'reprompt' => array(
                                                                        'outputSpeech' => array(
-                                                                                     'type' => "PlainText",
+                                                                                    'type' => "PlainText",
                                                                                      'text' => "Te ayudo en algo mas?"
                                                                        )
                                                          )
