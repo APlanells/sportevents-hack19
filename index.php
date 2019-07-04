@@ -143,43 +143,43 @@ function GetJsonMessageResponse($RequestMessageType, $EchoReqObj)
                             }
               elseif ($RequestMessageType == "IntentRequest")
                             {
-                echo '***********Entra aqui'
+                
                             if ($EchoReqObj->request->intent->name == "SportEventsIntent") // Alexa Intent name
                                           {
                                           $SpeakPhrase = "sport event detected";
-                                          }
-                            elseif ($EchoReqObj->request->intent->name == "tracking") // 2nd Alexa Intent name
-                                          {
-                                          $SpeakPhrase = "OK ok";
-                                          }
-                            $ReturnValue = json_encode(array(
-                                          'version' => $SETUP['SkillVersion'],
-                                          'sessionAttributes' => array(
-                                                         'countActionList' => array(
-                                                                       'read' => true,
-                                                                       'category' => true
-                                                         )
-                                          ) ,
+                                          
+
+                                           $ReturnValue = json_encode(array(
+                                                            'version' => $SETUP['SkillVersion'],
+                                                            'sessionAttributes' => array(
+                                                                                        'countActionList' => array(
+                                                                                                                  'read' => true,
+                                                                                                                   'category' => true
+                                                                                                                   )
+                                                                                          ) ,
                                           'response' => array(
                                                          'outputSpeech' => array(
-                                                                       'type' => "PlainText",
-                                                                       'text' => $SpeakPhrase
-                                                         ) ,
+                                                                                'type' => "PlainText",
+                                                                                'text' => $SpeakPhrase
+                                                                                ),
                                                          'card' => array(
                                                                        'type' => "Simple",
                                                                        'title' => "Lights",
                                                                        'content' => $SpeakPhrase
-                                                         )
-                                          ) ,
+                                                                        )
+                                                         ),
                                           'shouldEndSession' => true
-                            ));
+                                          ));
                             }
+                       }
                 else
                             {
                             ThrowRequestError();
                             }
               return $ReturnValue;
               } // end function GetJsonMessageResponse
+
+
 function ThrowRequestError($code = 400, $msg = 'Bad Request')
               {
               GLOBAL $SETUP;
