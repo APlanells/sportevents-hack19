@@ -18,7 +18,7 @@ $return_defaults = array(
                                           'response' => array(
                                                          'outputSpeech' => array(
                                                                        'type' => "PlainText",
-                                                                       'text' => ".$response."
+                                                                       'text' => "$response"
                                                          ) ,
                                                          'card' => array(
                                                                        'type' => "Simple",
