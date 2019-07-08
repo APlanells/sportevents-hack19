@@ -176,16 +176,12 @@ curl_close($ch);
                             }
               elseif ($RequestMessageType == "IntentRequest")
                             {
-                            if ($EchoReqObj->request->intent->name == "thank you") // Alexa Intent name
+                            if ($EchoReqObj->request->intent->name == "SportEventsIntent") // Alexa Intent name
                                           {
 
                                           $SpeakPhrase = "OK";
                                           }
-                            elseif ($EchoReqObj->request->intent->name == "tracking") // 2nd Alexa Intent name
-                                          {
 
-                                          $SpeakPhrase = "OK ok";
-                                          }
 
                             $ReturnValue = json_encode(array(
                                           'version' => $SETUP['SkillVersion'],
