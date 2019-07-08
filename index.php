@@ -118,8 +118,8 @@ function GetJsonMessageResponse($RequestMessageType, $EchoReqObj)
                                                          ) ,
                                                          'card' => array(
                                                                        'type' => "Simple",
-                                                                       'title' => "Lights Home",
-                                                                       'content' => "Orden aceptada Albert,acabo de activar las luces"
+                                                                       'title' => "Sport Events",
+                                                                       'content' => "Registered for the event! Enjoy!"
                                                          ) ,
                                                          'reprompt' => array(
                                                                        'outputSpeech' => array(
